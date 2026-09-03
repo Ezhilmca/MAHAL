@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, .font-serif-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  body {
+    background-color: #FAF8F5;
+    color: #1A1A1A;
+    overflow-x: hidden;
+  }
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #141210; }
+::-webkit-scrollbar-thumb { background: #4A0E17; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #6B1624; }
+
+.glass-dark {
+  background: rgba(20, 18, 16, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+.glass-light {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 239, 230, 0.8);
+}
+.glass-maroon {
+  background: rgba(74, 14, 23, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F4EFE6 0%, #D4AF37 50%, #E6CA65 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.maroon-gradient-text {
+  background: linear-gradient(135deg, #4A0E17 0%, #6B1624 70%, #30080E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gold-divider { height: 2px; background: linear-gradient(90deg, transparent 0%, #D4AF37 50%, transparent 100%); }
+.maroon-divider { height: 2px; background: linear-gradient(90deg, transparent 0%, #4A0E17 50%, transparent 100%); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
